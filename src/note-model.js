@@ -1,16 +1,18 @@
 (function(exports) {
-    function Note(text){
-      this.text = text;
-    }
+  var id = 0;
 
-    Note.prototype.returnText = function (){
-      return this.text;
-    };
+  function Note(text){
+    this.text = text;
+    this.id = id++;
+  }
 
-    Note.prototype.returnSnippet = function(){
-      return this.text.substring(0,20);
-    };
+  Note.prototype.returnText = function (){
+    return this.text;
+  };
 
-    exports.Note = Note;
-    exports.returnText = this.returnText;
+  Note.prototype.returnSnippet = function(){
+    return this.text.substring(0,20);
+  };
+
+  exports.Note = Note;
 })(this);

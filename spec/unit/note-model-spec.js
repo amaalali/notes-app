@@ -1,6 +1,12 @@
-function testNoteModel(string){
-  var testNote = new Note(string);
-  assert.isTrue(testNote.returnText() === string);
+var testNote = new Note("JavaScript is not confusing! :)");
+
+function testNoteModel(){
+  assert.isTrue(testNote.returnText() === "JavaScript is not confusing! :)");
 }
 
-testNoteModel("JavaScript is confusing! :/");
+function testNoteModelHasId(){
+  assert.isTrue(testNote.id === 3);
+}
+
+testNoteModel();
+testNoteModelHasId();
