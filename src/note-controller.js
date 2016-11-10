@@ -13,7 +13,7 @@
       this.noteList.newNote(text);
     }
 
-    NoteController.prototype.printHtml= function() {
+    NoteController.prototype.printHtml = function() {
       var elem = document.getElementById("app");
       elem.innerHTML = this.view.printHtml();
     }

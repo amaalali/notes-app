@@ -14,9 +14,8 @@
         var text = notearray.map(function(note) {
             return "<li><div>" + note.text + "</div></li>";
         });
-        return "<ul>" + text.join("") + "</ul>"
+        return "<ul>" + text.join("") + "</ul>";
     };
-
 
     exports.NoteListView = NoteListView;
 })(this);
