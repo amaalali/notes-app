@@ -12,7 +12,7 @@
         var list = this.noteLists();
         var notearray = list.returnNoteList();
         var text = notearray.map(function(note) {
-            return "<li><div>" + note.returnSnippet() + "</div></li>";
+            return "<li><div><a href='#" + note.id + "'>" + note.returnSnippet() + "</a></div></li>";
         });
         return "<ul>" + text.join("") + "</ul>";
     };
