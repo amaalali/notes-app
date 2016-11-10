@@ -6,6 +6,7 @@ function testNoteControllerInstantiation(){
 function testNoteControllerHTML(){
   var controller = new NoteController();
   controller.newNote('I like rum');
+
 }
 
 testNoteControllerInstantiation();
