@@ -4,8 +4,12 @@ function testNoteControllerInstantiation(){
 }
 
 function testNoteControllerHTML(){
-  var controller = new NoteController();
+  var noteList = new NoteList();
+  var controller = new NoteController(noteList);
   controller.newNote('I like rum');
+  controller.printHtml();
+  assert.isTrue(document.getElementById('app').innerHTML === "<ul><li><div>I like rum</div></li></ul>");
 }
 
 testNoteControllerInstantiation();
+testNoteControllerHTML();
